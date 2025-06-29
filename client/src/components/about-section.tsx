@@ -1,3 +1,4 @@
+import warehousing from "@assets/warehousing.jpg";
 export default function AboutSection() {
   return (
     <section id="about" className="py-20 bg-gray-50">
@@ -37,7 +38,7 @@ export default function AboutSection() {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+              src={warehousing} 
               alt="SwiftCourier warehouse facility" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
