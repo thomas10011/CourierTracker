@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { insertContactSchema } from "@shared/schema";
+import deliveryImage from "@assets/slide-2_1751228855864.jpg";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -67,16 +68,26 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-32 bg-gray-50 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={deliveryImage} 
+          alt="Professional delivery service with package handover" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60"></div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
-          <p className="text-xl text-gray-600">Get in touch with our team for personalized shipping solutions</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Contact Us</h2>
+          <p className="text-xl text-gray-200">Get in touch with our team for personalized shipping solutions</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="shadow-lg">
+          <Card className="bg-white/95 backdrop-blur-sm shadow-lg hover:bg-white transition-all">
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h3>
               <form onSubmit={handleSubmit}>
@@ -168,7 +179,7 @@ export default function ContactSection() {
 
           {/* Contact Information */}
           <div>
-            <Card className="shadow-lg mb-8">
+            <Card className="bg-white/95 backdrop-blur-sm shadow-lg mb-8 hover:bg-white transition-all">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
                 <div className="space-y-6">
