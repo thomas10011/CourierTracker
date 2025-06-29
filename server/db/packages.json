@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "trackingNumber": "7F3KJ9ZQ",
+    "status": "In Transit",
+    "sender": {
+      "name": "TechStore Ltd",
+      "address": "123 Business Ave, San Francisco, CA 94105"
+    },
+    "receiver": {
+      "name": "John Smith",
+      "address": "456 Oak Street, New York, NY 10001"
+    },
+    "currentLocation": {
+      "address": "Denver Distribution Center, Denver, CO 80202",
+      "lat": 39.7392,
+      "lng": -104.9903
+    },
+    "adminNotes": "Package in transit from West Coast distribution center. Expected delivery in 2-3 business days.",
+    "createdAt": "2024-12-29T10:00:00.000Z",
+    "updatedAt": "2024-12-29T16:30:00.000Z"
+  },
+  {
+    "id": 2,
+    "trackingNumber": "XR12P7LQ",
+    "status": "Out for Delivery",
+    "sender": {
+      "name": "Fashion Boutique",
+      "address": "789 Style Street, Los Angeles, CA 90210"
+    },
+    "receiver": {
+      "name": "Sarah Johnson",
+      "address": "321 Pine Road, Chicago, IL 60601"
+    },
+    "currentLocation": {
+      "address": "Chicago Local Delivery Hub, Chicago, IL 60601",
+      "lat": 41.8781,
+      "lng": -87.6298
+    },
+    "adminNotes": "Package out for delivery. Delivery scheduled for today between 2-6 PM.",
+    "createdAt": "2024-12-28T08:15:00.000Z",
+    "updatedAt": "2024-12-29T09:45:00.000Z"
+  },
+  {
+    "id": 3,
+    "trackingNumber": "M8N4K2WP",
+    "status": "Delivered",
+    "sender": {
+      "name": "Electronics World",
+      "address": "555 Tech Drive, Austin, TX 78701"
+    },
+    "receiver": {
+      "name": "Mike Davis",
+      "address": "888 Main Street, Boston, MA 02101"
+    },
+    "currentLocation": {
+      "address": "888 Main Street, Boston, MA 02101",
+      "lat": 42.3601,
+      "lng": -71.0589
+    },
+    "adminNotes": "Package successfully delivered and signed for by recipient at 2:45 PM.",
+    "createdAt": "2024-12-27T14:20:00.000Z",
+    "updatedAt": "2024-12-29T14:45:00.000Z"
+  }
+]
