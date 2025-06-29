@@ -79,5 +79,33 @@
     "adminNotes": "Package successfully delivered and signed for by recipient at 2:45 PM.",
     "createdAt": "2024-12-27T14:20:00.000Z",
     "updatedAt": "2024-12-29T14:45:00.000Z"
+  },
+  {
+    "status": "On Hold",
+    "sender": {
+      "name": "Gary Melvin ",
+      "address": "8901 Freedom Road, Houston Texas 30001"
+    },
+    "receiver": {
+      "name": "Richmond Tale",
+      "address": "8761 Sunshine Ray, NewYork city NewYork. "
+    },
+    "currentLocation": {
+      "address": "London, United Kingdom",
+      "lat": 0.1825,
+      "lng": 0.5243
+    },
+    "packageDetails": {
+      "type": "A Box",
+      "weight": "22kg",
+      "height": "10cm",
+      "color": "Brown"
+    },
+    "adminNotes": "Package is out for delivery. ",
+    "id": 4,
+    "trackingNumber": "A5I1FTLC",
+    "createdAt": "2025-06-29T17:11:20.849Z",
+    "updatedAt": "2025-06-29T17:11:20.852Z",
+    "photo": "A5I1FTLC.jpg"
   }
 ]
