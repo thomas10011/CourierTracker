@@ -126,6 +126,7 @@ server/
 
 ```
 Changelog:
+- June 29, 2025. Security fix: Moved admin credentials from hard-coded values to environment variables
 - June 29, 2025. Initial setup
 ```
 

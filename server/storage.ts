@@ -39,8 +39,11 @@ export class JSONStorage implements IStorage {
   }
 
   private async initializeFiles() {
+    const adminUsername = process.env.ADMIN_USERNAME || 'admin';
+    const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+    
     const files = [
-      { name: 'users.json', data: [{ id: 1, username: 'admin', password: 'admin123' }] },
+      { name: 'users.json', data: [{ id: 1, username: adminUsername, password: adminPassword }] },
       { name: 'packages.json', data: [] },
       { name: 'contacts.json', data: [] }
     ];
