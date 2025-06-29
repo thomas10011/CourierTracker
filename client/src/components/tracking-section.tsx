@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { formatDate, getStatusColor } from "@/lib/utils";
-import PackageMap from "./package-map";
+
 import type { Package } from "@shared/schema";
 
 export default function TrackingSection() {
@@ -196,12 +196,13 @@ export default function TrackingSection() {
                 </p>
               </div>
               
-              {/* Google Maps Integration */}
-              <PackageMap
-                lat={packageData.currentLocation.lat}
-                lng={packageData.currentLocation.lng}
-                address={packageData.currentLocation.address}
-              />
+              {/* Location Information */}
+              <div className="bg-gray-100 p-4 rounded-lg">
+                <div className="text-center text-gray-600">
+                  <i className="fas fa-map text-4xl mb-2"></i>
+                  <p>Map feature temporarily disabled</p>
+                </div>
+              </div>
             </div>
 
             {/* Admin Notes */}

@@ -73,7 +73,12 @@ export default function PackageMap({ lat, lng, address }: PackageMapProps) {
       initMap();
     } else {
       const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyBFw0Qbyq9zTFTd-tUY6dO4W-3f8L8y8kA'}&libraries=places`;
+      const apiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+      if (!apiKey) {
+        console.error('Google Maps API key not found. Please set VITE_GOOGLE_MAPS_API_KEY environment variable.');
+        return;
+      }
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
       script.async = true;
       script.defer = true;
       script.onload = initMap;
