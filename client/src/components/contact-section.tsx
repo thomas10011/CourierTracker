@@ -204,15 +204,7 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            {/* Emergency Contact */}
-            <div className="bg-red-50 border border-red-200 p-6 rounded-xl">
-              <h4 className="font-bold text-red-800 mb-2">
-                <i className="fas fa-exclamation-triangle mr-2"></i>
-                Emergency Support
-              </h4>
-              <p className="text-red-700 text-sm mb-2">For urgent shipment issues or emergencies:</p>
-              <p className="font-semibold text-red-800">24/7 Hotline: +1 (555) 911-SHIP</p>
-            </div>
+            
           </div>
         </div>
       </div>
