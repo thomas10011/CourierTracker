@@ -5,6 +5,7 @@ import AboutSection from "@/components/about-section";
 import ServicesSection from "@/components/services-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import airplaneImage from "@assets/project-details_1751228254997.jpg";
 
 export default function Home() {
   return (
@@ -17,6 +18,15 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose SwiftCourier?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">We deliver more than packages - we deliver peace of mind with every shipment</p>
+          </div>
+          
+          {/* Hero Image */}
+          <div className="mb-16">
+            <img 
+              src={airplaneImage} 
+              alt="SwiftCourier airplane ready for worldwide delivery" 
+              className="w-full h-64 md:h-80 object-cover rounded-2xl shadow-2xl"
+            />
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
