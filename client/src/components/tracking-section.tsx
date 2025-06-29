@@ -116,7 +116,7 @@ export default function TrackingSection() {
             </div>
 
             {/* Package Details Grid */}
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <div className="grid md:grid-cols-3 gap-8 mb-8">
               {/* Sender & Receiver Info */}
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-4">Shipping Details</h4>
@@ -130,6 +130,35 @@ export default function TrackingSection() {
                     <h5 className="font-medium text-gray-700 mb-1">To:</h5>
                     <p className="text-gray-600">{packageData.receiver.name}</p>
                     <p className="text-gray-600">{packageData.receiver.address}</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Package Physical Details */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Package Details</h4>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="font-medium text-gray-700">Type:</span>
+                    <span className="text-gray-600">{packageData.packageDetails.type}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium text-gray-700">Weight:</span>
+                    <span className="text-gray-600">{packageData.packageDetails.weight}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium text-gray-700">Height:</span>
+                    <span className="text-gray-600">{packageData.packageDetails.height}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium text-gray-700">Color:</span>
+                    <span className="text-gray-600 flex items-center">
+                      <div 
+                        className="w-4 h-4 rounded-full border border-gray-300 mr-2"
+                        style={{ backgroundColor: packageData.packageDetails.color.toLowerCase() }}
+                      ></div>
+                      {packageData.packageDetails.color}
+                    </span>
                   </div>
                 </div>
               </div>

@@ -152,6 +152,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
           lat: parseFloat(req.body.currentLocationLat),
           lng: parseFloat(req.body.currentLocationLng),
         },
+        packageDetails: {
+          type: req.body.packageType,
+          weight: req.body.packageWeight,
+          height: req.body.packageHeight,
+          color: req.body.packageColor,
+        },
       });
 
       const newPackage = await storage.createPackage(packageData);
@@ -190,6 +196,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
           address: req.body.currentLocationAddress,
           lat: parseFloat(req.body.currentLocationLat),
           lng: parseFloat(req.body.currentLocationLng),
+        } : undefined,
+        packageDetails: req.body.packageType ? {
+          type: req.body.packageType,
+          weight: req.body.packageWeight,
+          height: req.body.packageHeight,
+          color: req.body.packageColor,
         } : undefined,
       });
 

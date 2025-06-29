@@ -33,6 +33,12 @@ export const packages = z.object({
     lat: z.number(),
     lng: z.number(),
   }),
+  packageDetails: z.object({
+    type: z.string(),
+    weight: z.string(),
+    height: z.string(),
+    color: z.string(),
+  }),
   adminNotes: z.string(),
   photo: z.string().optional(),
   createdAt: z.string(),
@@ -53,6 +59,12 @@ export const insertPackageSchema = z.object({
     address: z.string().min(1),
     lat: z.number(),
     lng: z.number(),
+  }),
+  packageDetails: z.object({
+    type: z.string().min(1),
+    weight: z.string().min(1),
+    height: z.string().min(1),
+    color: z.string().min(1),
   }),
   adminNotes: z.string(),
 });

@@ -20,6 +20,7 @@ export default function AdminDashboard() {
     sender: { name: "", address: "" },
     receiver: { name: "", address: "" },
     currentLocation: { address: "", lat: 0, lng: 0 },
+    packageDetails: { type: "", weight: "", height: "", color: "" },
     adminNotes: "",
   });
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -120,6 +121,7 @@ export default function AdminDashboard() {
       sender: { name: "", address: "" },
       receiver: { name: "", address: "" },
       currentLocation: { address: "", lat: 0, lng: 0 },
+      packageDetails: { type: "", weight: "", height: "", color: "" },
       adminNotes: "",
     });
     setSelectedFile(null);
@@ -137,6 +139,10 @@ export default function AdminDashboard() {
     formData.append('currentLocationAddress', newPackage.currentLocation.address);
     formData.append('currentLocationLat', newPackage.currentLocation.lat.toString());
     formData.append('currentLocationLng', newPackage.currentLocation.lng.toString());
+    formData.append('packageType', newPackage.packageDetails.type);
+    formData.append('packageWeight', newPackage.packageDetails.weight);
+    formData.append('packageHeight', newPackage.packageDetails.height);
+    formData.append('packageColor', newPackage.packageDetails.color);
     formData.append('adminNotes', newPackage.adminNotes);
     
     if (selectedFile) {
@@ -159,6 +165,10 @@ export default function AdminDashboard() {
     formData.append('currentLocationAddress', editingPackage.currentLocation.address);
     formData.append('currentLocationLat', editingPackage.currentLocation.lat.toString());
     formData.append('currentLocationLng', editingPackage.currentLocation.lng.toString());
+    formData.append('packageType', editingPackage.packageDetails.type);
+    formData.append('packageWeight', editingPackage.packageDetails.weight);
+    formData.append('packageHeight', editingPackage.packageDetails.height);
+    formData.append('packageColor', editingPackage.packageDetails.color);
     formData.append('adminNotes', editingPackage.adminNotes);
     
     if (selectedFile) {
@@ -324,6 +334,85 @@ export default function AdminDashboard() {
                         <SelectItem value="Delivered">Delivered</SelectItem>
                       </SelectContent>
                     </Select>
+
+                    {/* Package Physical Details */}
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      <Input
+                        placeholder="Package Type"
+                        value={editingPackage ? editingPackage.packageDetails.type : newPackage.packageDetails.type}
+                        onChange={(e) => {
+                          if (editingPackage) {
+                            setEditingPackage({
+                              ...editingPackage,
+                              packageDetails: { ...editingPackage.packageDetails, type: e.target.value }
+                            });
+                          } else {
+                            setNewPackage({
+                              ...newPackage,
+                              packageDetails: { ...newPackage.packageDetails, type: e.target.value }
+                            });
+                          }
+                        }}
+                        required
+                      />
+                      <Input
+                        placeholder="Weight (e.g., 2.5 kg)"
+                        value={editingPackage ? editingPackage.packageDetails.weight : newPackage.packageDetails.weight}
+                        onChange={(e) => {
+                          if (editingPackage) {
+                            setEditingPackage({
+                              ...editingPackage,
+                              packageDetails: { ...editingPackage.packageDetails, weight: e.target.value }
+                            });
+                          } else {
+                            setNewPackage({
+                              ...newPackage,
+                              packageDetails: { ...newPackage.packageDetails, weight: e.target.value }
+                            });
+                          }
+                        }}
+                        required
+                      />
+                    </div>
+                    
+                    <div className="grid grid-cols-2 gap-2 mb-2">
+                      <Input
+                        placeholder="Height (e.g., 15 cm)"
+                        value={editingPackage ? editingPackage.packageDetails.height : newPackage.packageDetails.height}
+                        onChange={(e) => {
+                          if (editingPackage) {
+                            setEditingPackage({
+                              ...editingPackage,
+                              packageDetails: { ...editingPackage.packageDetails, height: e.target.value }
+                            });
+                          } else {
+                            setNewPackage({
+                              ...newPackage,
+                              packageDetails: { ...newPackage.packageDetails, height: e.target.value }
+                            });
+                          }
+                        }}
+                        required
+                      />
+                      <Input
+                        placeholder="Color"
+                        value={editingPackage ? editingPackage.packageDetails.color : newPackage.packageDetails.color}
+                        onChange={(e) => {
+                          if (editingPackage) {
+                            setEditingPackage({
+                              ...editingPackage,
+                              packageDetails: { ...editingPackage.packageDetails, color: e.target.value }
+                            });
+                          } else {
+                            setNewPackage({
+                              ...newPackage,
+                              packageDetails: { ...newPackage.packageDetails, color: e.target.value }
+                            });
+                          }
+                        }}
+                        required
+                      />
+                    </div>
                     
                     <Input
                       placeholder="Current Location Address"
