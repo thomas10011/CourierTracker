@@ -70,9 +70,7 @@ export default function ServicesSection() {
                   : "bg-white border-2 border-gray-100 hover:shadow-xl transition-shadow"
               }`}
             >
-              <i className={`${service.icon} text-4xl mb-6 ${
-                service.gradient ? "" : service.color
-              }`}></i>
+              <i className="fas fa-truck text-4xl mb-6 text-[#004182]"></i>
               <h3 className={`text-xl font-bold mb-4 ${
                 service.gradient ? "text-white" : "text-gray-900"
               }`}>
