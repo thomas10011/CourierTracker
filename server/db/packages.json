@@ -107,5 +107,33 @@
     "createdAt": "2025-06-29T17:11:20.849Z",
     "updatedAt": "2025-06-29T17:11:20.852Z",
     "photo": "A5I1FTLC.jpg"
+  },
+  {
+    "status": "On Hold",
+    "sender": {
+      "name": "Dr. Ernesto Zulauf",
+      "address": "650 Grand Ave\r\nCity/Town: St Paul\r\nState/Province/Region: Minnesota\r\nZip/Postal Code: 55105\r\nCountry: United States"
+    },
+    "receiver": {
+      "name": "Grover Hermann",
+      "address": "5233 Sunset Blvd\r\nCity/Town: Los Angeles\r\nState/Province/Region: California\r\nZip/Postal Code: 90027\r\nCountry: United States"
+    },
+    "currentLocation": {
+      "address": "KHabarovska Vul., bld. 7/Б, appt. 45 Kirovograd, Kirovogradskaya oblast, Ukraine",
+      "lat": 0,
+      "lng": 0
+    },
+    "packageDetails": {
+      "type": "A Box",
+      "weight": "22kg",
+      "height": "12cm",
+      "color": "brown"
+    },
+    "adminNotes": "Package is currently awaiting payment of delivery fee before package can be sent out for delivery. ",
+    "id": 5,
+    "trackingNumber": "OKZRZNSC",
+    "createdAt": "2025-06-29T20:13:53.045Z",
+    "updatedAt": "2025-06-29T20:13:53.047Z",
+    "photo": "OKZRZNSC.jpg"
   }
 ]
