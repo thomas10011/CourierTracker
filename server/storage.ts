@@ -52,6 +52,13 @@ export class JSONStorage implements IStorage {
       const filePath = path.join(this.dbPath, file.name);
       try {
         await fs.access(filePath);
+        // Special handling for users.json to ensure admin user exists
+        if (file.name === 'users.json') {
+          const currentData = await this.readFile<any>('users.json');
+          if (currentData.length === 0) {
+            await fs.writeFile(filePath, JSON.stringify(file.data, null, 2));
+          }
+        }
       } catch {
         await fs.writeFile(filePath, JSON.stringify(file.data, null, 2));
       }
