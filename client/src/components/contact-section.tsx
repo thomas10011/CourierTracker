@@ -201,7 +201,7 @@ export default function ContactSection() {
                     <i className="fas fa-envelope text-2xl text-primary mr-4 mt-1"></i>
                     <div>
                       <h4 className="font-semibold text-gray-900">Email</h4>
-                      <p className="text-gray-600">info@swiftcourier.com</p>
+                      <p className="text-gray-600">info@swiftcoservices.online</p>
                     </div>
                   </div>
                   <div className="flex items-start">
