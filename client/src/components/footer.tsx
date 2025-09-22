@@ -81,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 SwiftCourier. All rights reserved. | Privacy Policy | Terms of Service</p>
+          <p>&copy; 2024 SwiftCourier. All rights reserved.</p>
         </div>
       </div>
     </footer>
