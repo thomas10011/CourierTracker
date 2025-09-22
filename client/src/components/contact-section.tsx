@@ -187,7 +187,7 @@ export default function ContactSection() {
                     <i className="fas fa-map-marker-alt text-2xl text-primary mr-4 mt-1"></i>
                     <div>
                       <h4 className="font-semibold text-gray-900">Address</h4>
-                      <p className="text-gray-600">123 Logistics Avenue<br />Business District, NY 10001</p>
+                      <p className="text-gray-600">3401 N. MIAMI, AVE.<br />STE 230 Miami Florida 33127</p>
                     </div>
                   </div>
                   <div className="flex items-start">
