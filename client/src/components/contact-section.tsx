@@ -194,7 +194,7 @@ export default function ContactSection() {
                     <i className="fas fa-phone text-2xl text-primary mr-4 mt-1"></i>
                     <div>
                       <h4 className="font-semibold text-gray-900">Phone</h4>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+1 (111) 222-4567</p>
                     </div>
                   </div>
                   <div className="flex items-start">
