@@ -75,7 +75,7 @@ export default function Footer() {
             <div className="space-y-2 text-gray-300">
               <p><i className="fas fa-map-marker-alt mr-2"></i>123 Logistics Avenue, NY 10001</p>
               <p><i className="fas fa-phone mr-2"></i>+1 (111) 222-4567</p>
-              <p><i className="fas fa-envelope mr-2"></i>info@swiftcourier.com</p>
+              <p><i className="fas fa-envelope mr-2"></i>info@swiftcoservices.online</p>
             </div>
           </div>
         </div>
